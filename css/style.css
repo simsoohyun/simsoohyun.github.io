@@ -1,1 +1,114 @@
 @charset "utf-8";
+@font-face {
+    font-family: 'HechoAMano';
+    src: url(../font/HechoAMano/HechoAMano-Regular.ttf)
+}
+@font-face {
+    font-family: 'franklin_gothic';
+    src: url(../font/franklin_gothic/framd.ttf);
+}
+:root {
+    /* color */
+    --yellow-color: #fff200;
+    --yellow-lighter-color: #fffbb3;
+
+    --black-color: #111;
+
+    /* z-index */
+
+    /* typography */
+    --hechoAMano-font: 'HechoAMano';
+
+    --uppercase-font: uppercase;
+
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .813rem;
+
+    /* margin */
+
+}
+
+
+
+/* ===== reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    vertical-align: top;
+}
+button {
+    cursor: pointer;
+}
+
+/* ===== common ===== */
+body {
+    color: var(--black-color);
+}
+/* ===== layout ===== */
+.inner {
+    max-width: 768px;
+    min-width: 360px;
+    padding: 0 3rem;
+}
+
+/* ===== header ===== */
+#header {
+    text-transform: var(--uppercase-font);
+}
+#header__small {
+    width: 100%;
+    background: var(--yellow-color);
+    padding: 1rem 3rem ;
+}
+.logo {
+    font-size: var(--h1-font-size);
+    font-family: 'franklin_gothic';
+}
+#header__big {
+    height: 300px;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.5);
+    position: relative;
+}
+.header__text {
+    font-family: var(--hechoAMano-font);
+    font-size: var(--big-font-size);
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+.gnb {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+.gnb__item {
+    margin-right: 2rem;
+
+}
+.gnb__menu {
+    font-size: var(--h2-font-size);
+}
+
+/* ===== section.home ===== */
+#home {
+    background: var(--yellow-lighter-color);
+    height: calc(100vh - 70px);
+    width: 100%;
+    margin-top: -300px;
+}
