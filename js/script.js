@@ -1,16 +1,14 @@
 'use strict';
 $(function(){
-    var $header = $('#header'),
-        $headerSmall = $('#header__small'),
+    var $headerSmall = $('#header__small'),
         $logo = $('.logo'),
         $gnb = $('.gnb'),
-        $arrowup = $('#arrowup'),
-        $home = $('#home');
+        $arrowup = $('#arrowup');
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         var headerHeight = $(header).outerHeight();
-        var homeHeight = $(home).outerHeight();
+        var homeHeight = $('#home').outerHeight();
         /* 스크롤이 header보다 내려가면 header가 fix 됨 */
         if(scrollTop > headerHeight){
             $headerSmall.addClass('fixed');
@@ -21,7 +19,7 @@ $(function(){
             $logo.removeClass('fixed');
             $gnb.removeClass('fixed');
         }
-        /* 스크롤이 home보다 내려가면 arrowup이 보이게 됨 (미완.. 안됨 ㅜㅜ)*/
+        /* 스크롤이 home보다 내려가면 arrowup이 보이게 됨 */
         if(scrollTop > homeHeight){
             $arrowup.addClass('visible');
         }else {

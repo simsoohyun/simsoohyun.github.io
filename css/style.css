@@ -41,8 +41,8 @@
 
     --big-font-size: 4rem;
     --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.5rem;
 
     /* ===== z-index ===== */
 
@@ -83,20 +83,34 @@ img {
 button {
     cursor: pointer;
 }
-h1 {
-    font-size: var(--h1-font-size);
-}
-h2 {
-    font-size: var(--h2-font-size);
-}
-h3 {
-    font-size: var(--h3-font-size);
-}
+
 /* ===== reusable ===== */
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.section__title {
+    text-transform: var(--uppercase-font);
+    padding: 2rem 0;
+    font-family: var(--hechoAMano-font);
+    font-size: var(--big-font-size);
+}
+.about__sub-title {
+    text-transform: var(--uppercase-font);
+    font-family: var(--AppleSDGothicNeoEB-font);
+    font-size: var(--h2-font-size);
+    position: relative;
+    display: inline-block;
+}
+.about__sub-title:before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: var(--main-yellow-color);
+    position: absolute;
+    bottom: 30%;
+    left: 0;
 }
 /* ===== common ===== */
 body {
@@ -109,7 +123,7 @@ body {
     /* max-width: 768px;
     min-width: 360px;
     padding: 0 3rem; */
-    width: 1200px;
+    max-width: 1200px;
     height: 100%;
     margin: 0 auto;
     border-right: 1px solid #000;
@@ -139,7 +153,7 @@ body {
     padding: .5rem 3rem;
 }
 .logo.fixed {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
 }
 /* .gnb.fixed {
     position: absolute;
@@ -196,22 +210,39 @@ body {
     left: -20px;
 }
 .gnb__menu {
-    font-size: var(--h2-font-size);
+    font-size: var(--h3-font-size);
     position: relative;
 }
 
 /* ===== section.home ===== */
 #home {
     height: calc(100vh - 70px);
-    /* width: 100%; */
     margin-top: -300px;
     border-bottom: 1px solid #000;
 }
 
 /* ===== section.about ===== */
 #about {
-    height: calc(100vh - 45px);/* 수정해야함 */
+    height: calc(100vh - 45px);
+    background: green;
 }
+.about__container {
+    background: pink;
+    display: flex;
+    
+    /* position: relative; */
+}
+.about__img {
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    border: 1px solid #000;
+}
+.about__profile {
+
+}
+
+
 /* ===== arrow up ===== */
 #arrowup {
     position: fixed;
