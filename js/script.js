@@ -3,6 +3,7 @@ $(function(){
     var $headerSmall = $('#header__small'),
         $logo = $('.logo'),
         $gnb = $('.gnb'),
+        $smallGnb = $('.small__gnb'),
         $arrowup = $('#arrowup');
 
     $(window).scroll(function(){
@@ -14,10 +15,12 @@ $(function(){
             $headerSmall.addClass('fixed');
             $logo.addClass('fixed');
             $gnb.addClass('fixed');
+            $smallGnb.addClass('fixed');
         }else {
             $headerSmall.removeClass('fixed');
             $logo.removeClass('fixed');
             $gnb.removeClass('fixed');
+            $smallGnb.removeClass('fixed');
         }
         /* 스크롤이 home보다 내려가면 arrowup이 보이게 됨 */
         if(scrollTop > homeHeight){
