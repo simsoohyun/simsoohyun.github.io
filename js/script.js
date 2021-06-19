@@ -5,7 +5,13 @@ $(function(){
         $gnb = $('.gnb'),
         $smallGnb = $('.small__gnb'),
         $arrowup = $('#arrowup'),
-        $aboutImg = $('.about__img');
+        $aboutImg = $('.about__img'),
+        $moon = $('.darkmode__icon');
+
+    /* moon을 클릭하면 sun이 나오게 됨 */
+    // $(moon).click(function(){
+    //     $moon.addClass('lightmode');
+    // })
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
@@ -46,33 +52,81 @@ $(function(){
         $('html, body').animate({scrollTop: 0});
     });
 
+    
 
     /* ===== section skills__history cirle 애니메이션 ===== */
     var controller = new ScrollMagic.Controller();
-
-    var circleLeft = TweenMax.to('.circleLeft', 1, {
-        x: -500,
-        color: "red"
+    /* left circle */
+    var circleLeft = TweenMax.to('.circle__left', 1, {
+        x: 650,
     })
     var scene = new ScrollMagic.Scene({
-        triggerElement: ".about__skills__history__section",
+        triggerElement: ".about__skills__section",
         triggerHook: 0,
         offset: 0,
-        duration: "100%",
+        duration: "70%",
     })
     .setTween(circleLeft)
     .addTo(controller)
     .addIndicators({
-        name: '원',
+        name: 'circle-left',
+    })
+    /* right circle */
+    var circleRight = TweenMax.to('.circle__right', 1, {
+        x: -600,
+    })
+    var scene1 = new ScrollMagic.Scene({
+        triggerElement: ".about__skills__section",
+        triggerHook: 0,
+        offset: 0,
+        duration: "70%",
+    })
+    .setTween(circleRight)
+    .addTo(controller)
+    .addIndicators({
+        name: 'circle-right',
     })
 
 
     /* section.website - slider */
     $('.website__container').slick({
+        dots: true,
         autoplay: true,
         autoplaySpeed: 3000,
     });
 
+    $moon.click(function(){
+        $moon.addClass('lightmode');
+    })
 
     
+    /* ===== artwork modal ===== */
+    var $overlay = $('.overlay'),
+        $example = $('.artwork__example'),
+        $modal = $('.modal');
+    /* 초기상태 */
+    $overlay.hide();
+    console.log($overlay);
+
+
+    /* ===== point accordion ===== */
+    var $pointContent = $('.point__item__content'),
+        $pointTitle = $('.point__item__title')
+    /* 초기상태 */
+    $pointContent.hide();
+    $pointContent.eq(0).show();
+    /* title을 클릭하면 해당하는 content가 보여야함 */
+    $pointTitle.click(function(){
+
+        $pointTitle.removeClass('visible');
+        $pointContent.stop().slideUp();
+        $(this).siblings().stop().slideToggle();
+        $(this).toggleClass('visible');
+
+    })
+
+
 })
+
+
+
