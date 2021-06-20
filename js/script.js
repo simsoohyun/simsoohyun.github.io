@@ -57,14 +57,14 @@ $(function(){
     /* ===== section skills__history cirle 애니메이션 ===== */
     var controller = new ScrollMagic.Controller();
     /* left circle */
-    var circleLeft = TweenMax.to('.circle__left', 1, {
-        x: 650,
+    var circleLeft = TweenMax.to('.history__circle__left', 1, {
+        x: 500,
     })
     var scene = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
         triggerHook: 0,
         offset: 0,
-        duration: "70%",
+        duration: "100%",
     })
     .setTween(circleLeft)
     .addTo(controller)
@@ -72,14 +72,14 @@ $(function(){
         name: 'circle-left',
     })
     /* right circle */
-    var circleRight = TweenMax.to('.circle__right', 1, {
-        x: -600,
+    var circleRight = TweenMax.to('.history__circle__right', 1, {
+        x: -400,
     })
     var scene1 = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
         triggerHook: 0,
         offset: 0,
-        duration: "70%",
+        duration: "100%",
     })
     .setTween(circleRight)
     .addTo(controller)
@@ -88,7 +88,7 @@ $(function(){
     })
 
 
-    /* section.website - slider */
+    /* ===== section.website - slider ===== */
     $('.website__container').slick({
         dots: true,
         autoplay: true,
