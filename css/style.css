@@ -162,16 +162,7 @@ h6 {
     margin-bottom: 2rem;
     /* display: inline-block; */
 }
-/* .about__sub-title:before {
-    content: '';
-    width: 100%;
-    height: 10px;
-    background: var(--main-yellow-color);
-    position: absolute;
-    bottom: 30%;
-    left: 0;
-    z-index: -1;
-} */
+
 /* ===== common ===== */
 body {
     color: var(--main-black-color);
@@ -182,7 +173,6 @@ body {
 section {
     margin-bottom: 3rem;
 }
-/* ===== layout ===== */
 .inner {
     /* max-width: 768px;
     min-width: 360px;
@@ -907,7 +897,6 @@ section#point {
     margin: 0 auto;
 }
 .point__item {
-
 }
 .point__item__title {
     text-transform: var(--uppercase-font);
@@ -915,17 +904,57 @@ section#point {
     background: var(--main-yellow-color);
     padding: .5rem 0;
     cursor: pointer;
-
 }
 .point__item__title.visible {
     background: var(--lighter-yellow-color);
     border: 3px solid var(--main-yellow-color);
 }
+
 .point__item__content {
     /* height: 400px; */
-    padding: 1rem 1rem 5rem 1rem;
+    /* padding: 1rem 1rem 5rem 1rem; */
+    padding: 2rem;
     border: 3px solid var(--main-yellow-color);
+    display: flex;
 }
+.point__img {
+    flex: 2;
+}
+.point__img img {
+    width: 100px;
+}
+.point__responsive__img img:nth-child(2) {
+    margin-top: 20px;
+}
+.point__root__img img,
+.point__naming__img img,
+.point__common__img img {
+    width: 150px;
+    border-radius: 5px;
+}
+.point__desc {
+    flex: 6;
+}
+.point__root__desc,
+.point__naming__desc,
+.point__common__desc {
+    flex: 8;
+}
+.point__desc-tag span {
+    background: var(--main-yellow-color);
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.point__desc-text {
+    margin-top: 20px;
+    font-size: var(--h5-font-size);
+}
+
+
+
+
+
 
 /* ===== section.blog ===== */
 section#blog {
@@ -996,13 +1025,28 @@ footer {
 }
 .footer__content {
     font-size: var(--h3-font-size);
-    width: 400px;
     margin-left: 5rem;
     line-height: 3rem;
+    /* border: 1px solid #000; */
 }
 .footer__item {
-
-    /* border: 1px solid #000; */
+}
+.footer__item:before {
+    font-family: unicons-line;
+    font-size: var(--h1-font-size);
+}
+.footer__phone:before {
+    content: '\e9e7';
+    
+}
+.footer__email:before {
+    content: '\e9e6';
+}
+.footer__git:before {
+    content: '\ec0f';
+}
+.footer__blog:before {
+    content: '\ec0f';
 }
 .footer__text {
     font-family: var(--kindergarden-font);
