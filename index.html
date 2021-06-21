@@ -3,8 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
 <!-- css -->
 <link rel="stylesheet" href="./css/style.css">
 <!-- slick css -->
@@ -12,6 +10,7 @@
 <!-- icon -->
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <!-- js -->
 <script src="./js/jquery-3.6.0.min.js"></script>
 <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
@@ -67,7 +66,10 @@
                     </li>
                     <li class="small__gnb__item">
                         <a href="#" class="darkmode__icon">
-                            <i class="far fa-moon"></i>
+                            <i class="uil uil-moon"></i>
+                        </a>
+                        <a href="#" class="lightmode__icon">
+                            <i class="uil uil-sun"></i>
                         </a>
                     </li>
                 </ul>
@@ -116,9 +118,25 @@
     
     <section id="home" class="home">
         <div class="inner">
-            <div class="home__container flex-center">
+            <!-- <div class="home__container flex-center">
                 
-            </div>
+            </div> -->
+
+
+
+            <!-- <div class="home__container">
+	
+                <h1 class="home__text">Pulse Animation</h1>
+                
+                <svg class="pulse" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle id="Oval" cx="512" cy="512" r="512"></circle>
+                    <circle id="Oval" cx="512" cy="512" r="512"></circle>
+                    <circle id="Oval" cx="512" cy="512" r="512"></circle>
+                </svg>
+                
+            </div> -->
+
+
         </div>
     </section>
     <section id="about__profile__section" class="about__profile__section">
@@ -152,8 +170,8 @@
                         <span>계명대학교 일본어문학과 전공</span>
                         <span>
                             그린컴퓨터디자인학원<br>
-                            디지털디자인(웹디자인)<br>
-                            구직자 양성과정 수료
+                            디지털디자인(웹디자인) 구직자 양성과정 수료
+                            
                         </span>
                     </div>
                 </div>
@@ -316,8 +334,10 @@
                                 <h4 class="site__subtitle">웹전용 사이트<br>
                                     기여도 : 100%
                                 </h4>
-                                <a href="#" class="website__viewcode">view code</a>
-                                <a href="#" class="website__gotosite">go to site</a>
+                                <div class="site__desc-btn">
+                                    <a href="#" class="website__viewcode">view code</a>
+                                    <a href="#" class="website__gotosite">go to site</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -331,8 +351,10 @@
                                 <h4 class="site__subtitle">반응형 사이트<br>
                                     기여도 : 100%
                                 </h4>
-                                <a href="#" class="website__viewcode">view code</a>
-                                <a href="#" class="website__gotosite">go to site</a>
+                                <div class="site__desc-btn">
+                                    <a href="#" class="website__viewcode">view code</a>
+                                    <a href="#" class="website__gotosite">go to site</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -346,8 +368,10 @@
                                 <h4 class="site__subtitle">웹전용 사이트<br>
                                     기여도 : 100%
                                 </h4>
-                                <a href="#" class="website__viewcode">view code</a>
-                                <a href="#" class="website__gotosite">go to site</a>
+                                <div class="site__desc-btn">
+                                    <a href="#" class="website__viewcode">view code</a>
+                                    <a href="#" class="website__gotosite">go to site</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -479,12 +503,12 @@
                         </div>
                         <div class="point__desc point__common__desc">
                             <div class="point__desc-tag point__common__desc-tag">
-                                <span>&#35;변수선언</span>
+                                <span>&#35;reusable</span>
                                 <span>&#35;일관성</span>
                                 <span>&#35;유지보수</span>
                             </div>
                             <p class="point__desc-text point__common__desc-text">
-                                구현의 일관성을 유지하여 유지 보수에 효율성을 높이기 위해 css에서 변수를 사용하였습니다.
+                                'title', 'section', 'inner'등 공통되는 css를 하나의 class로 묶어 재사용할 수 있게 구현하였습니다.
                             </p>
                         </div>
                     </div>
@@ -523,7 +547,7 @@
             </h1>
             <ul class="blog__container clearfix">
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222255416345">
                         <div class="blog__img img-form"></div>
                         <div class="blog__desc">
                             <h5>FORM 태그</h5>
@@ -532,7 +556,7 @@
                     </a>
                 </li>
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222264782106">
                         <div class="blog__img img-selector"></div>
                         <div class="blog__desc">
                             <h5>selector</h5>
@@ -541,7 +565,7 @@
                     </a>
                 </li>
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222345721953">
                         <div class="blog__img img-netflix"></div>
                         <div class="blog__desc">
                             <h5>NETFLIX 클론코딩</h5>
@@ -550,7 +574,7 @@
                     </a>
                 </li>
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222373854186">
                         <div class="blog__img img-function"></div>
                         <div class="blog__desc">
                             <h5>함수 &#38; 매개변수</h5>
@@ -559,7 +583,7 @@
                     </a>
                 </li>
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222393338531">
                         <div class="blog__img img-jquery"></div>
                         <div class="blog__desc">
                             <h5>jQuery</h5>
@@ -568,7 +592,7 @@
                     </a>
                 </li>
                 <li class="blog__item l-grid-4-12">
-                    <a href="#">
+                    <a href="https://blog.naver.com/tngus2958/222396431620">
                         <div class="blog__img img-slick"></div>
                         <div class="blog__desc">
                             <h5>Slick. js</h5>

@@ -5,13 +5,9 @@ $(function(){
         $gnb = $('.gnb'),
         $smallGnb = $('.small__gnb'),
         $arrowup = $('#arrowup'),
-        $aboutImg = $('.about__img'),
-        $moon = $('.darkmode__icon');
+        $aboutImg = $('.about__img');
+        
 
-    /* moon을 클릭하면 sun이 나오게 됨 */
-    // $(moon).click(function(){
-    //     $moon.addClass('lightmode');
-    // })
 
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
@@ -95,9 +91,9 @@ $(function(){
         autoplaySpeed: 3000,
     });
 
-    $moon.click(function(){
-        $moon.addClass('lightmode');
-    })
+    // $moon.click(function(){
+    //     $moon.addClass('lightmode');
+    // })
 
     
     /* ===== artwork modal ===== */
@@ -124,7 +120,17 @@ $(function(){
         $(this).toggleClass('visible');
 
     })
-
+    /* moon을 클릭하면 sun이 나오게 됨 */
+    var $darkmode = $('.darkmode__icon'),
+        $lightmode = $('.lightmode__icon');
+    $darkmode.click(function(){
+        $lightmode.addClass('visible');
+        $darkmode.addClass('visible');
+    })
+    $lightmode.click(function(){
+        $lightmode.removeClass('visible');
+        $darkmode.removeClass('visible');
+    })
 
 })
 
