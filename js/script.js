@@ -34,12 +34,6 @@ $(function(){
         }else {
             $arrowup.removeClass('visible');
         }
-        /* 스크롤이 about__profile__section 보다 내려가면 about__img가 fix 됨 */
-        // if(scrollTop > aboutProfileHeight){
-        //     $aboutImg.addClass('fixed');
-        // }else {
-        //     $aboutImg.removeClass('fixed');
-        // }
         
     })
 
@@ -54,7 +48,8 @@ $(function(){
     var controller = new ScrollMagic.Controller();
     /* left circle */
     var circleLeft = TweenMax.to('.history__circle__left', 1, {
-        x: 500,
+        x: 600,
+        autoAlpha: 1
     })
     var scene = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
@@ -67,9 +62,30 @@ $(function(){
     .addIndicators({
         name: 'circle-left',
     })
+
+
+    /* left circle이 다시 사라지게 */
+    var circleLeft = TweenMax.to('.history__circle__left', 1, {
+        x: 0,
+        autoAlpha: 0
+    })
+    var scene2 = new ScrollMagic.Scene({
+        triggerElement: ".website",
+        triggerHook: 0,
+        offset: 0,
+        duration: "100%",
+    })
+    .setTween(circleLeft)
+    .addTo(controller)
+    .addIndicators({
+        name: 'circle-left-remove',
+    })
+
     /* right circle */
     var circleRight = TweenMax.to('.history__circle__right', 1, {
         x: -400,
+        // autoAlpha: 1
+        autoAlpha: 1
     })
     var scene1 = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
@@ -82,7 +98,22 @@ $(function(){
     .addIndicators({
         name: 'circle-right',
     })
-
+    /* right circle이 다시 사라지게 */
+    var circleRight = TweenMax.to('.history__circle__right', 1, {
+        x: 0,
+        autoAlpha: 0
+    })
+    var scene3 = new ScrollMagic.Scene({
+        triggerElement: ".website",
+        triggerHook: 0,
+        offset: 0,
+        duration: "100%",
+    })
+    .setTween(circleRight)
+    .addTo(controller)
+    .addIndicators({
+        name: 'circle-right',
+    })
 
     /* ===== section.website - slider ===== */
     $('.website__container').slick({
@@ -123,13 +154,17 @@ $(function(){
     /* moon을 클릭하면 sun이 나오게 됨 */
     var $darkmode = $('.darkmode__icon'),
         $lightmode = $('.lightmode__icon');
-    $darkmode.click(function(){
+    $darkmode.click(function(e){
+        e.preventDefault();
         $lightmode.addClass('visible');
         $darkmode.addClass('visible');
+        $('body').addClass('dark-theme');
     })
-    $lightmode.click(function(){
+    $lightmode.click(function(e){
+        e.preventDefault();
         $lightmode.removeClass('visible');
         $darkmode.removeClass('visible');
+        $('body').removeClass('dark-theme');
     })
 
 })
