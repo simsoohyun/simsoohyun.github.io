@@ -49,7 +49,7 @@ $(function(){
     /* left circle */
     var circleLeft = TweenMax.to('.history__circle__left', 1, {
         x: 600,
-        autoAlpha: 1
+        autoAlpha: .8
     })
     var scene = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
@@ -84,8 +84,7 @@ $(function(){
     /* right circle */
     var circleRight = TweenMax.to('.history__circle__right', 1, {
         x: -400,
-        // autoAlpha: 1
-        autoAlpha: 1
+        autoAlpha: .8
     })
     var scene1 = new ScrollMagic.Scene({
         triggerElement: ".about__skills__section",
@@ -122,10 +121,6 @@ $(function(){
         autoplaySpeed: 3000,
     });
 
-    // $moon.click(function(){
-    //     $moon.addClass('lightmode');
-    // })
-
     
     /* ===== artwork modal ===== */
     var $overlay = $('.overlay'),
@@ -151,7 +146,7 @@ $(function(){
         $(this).toggleClass('visible');
 
     })
-    /* moon을 클릭하면 sun이 나오게 됨 */
+    /* ===== moon을 클릭하면 sun이 나오게 됨 ===== */
     var $darkmode = $('.darkmode__icon'),
         $lightmode = $('.lightmode__icon');
     $darkmode.click(function(e){
@@ -165,6 +160,17 @@ $(function(){
         $lightmode.removeClass('visible');
         $darkmode.removeClass('visible');
         $('body').removeClass('dark-theme');
+    })
+
+    /* ===== menu를 클릭하면 해당 section으로 이동 */
+    var $gnbMenu = $('.gnb__menu');
+    $gnbMenu.click(function(){
+        // dataTarget #about, #skills, #contact
+        var dataTarget = $(this).attr('data-target');
+        // target은 클릭한 메뉴의 엘리먼트다
+        var $target = $(dataTarget);
+        var distance = $target.offset().top;
+        $('html, body').animate({scrollTop: distance});
     })
 
 })
