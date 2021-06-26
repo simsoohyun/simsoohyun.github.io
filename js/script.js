@@ -16,25 +16,48 @@ $(function(){
         var aboutProfileHeight = $('#about__profile__section').outerHeight();
         var aboutSkillsHeight = $('#about__skills__section').outerHeight();
         var smallgnbHeight = $('.small__gnb').outerHeight();
+
+    /* 메뉴를 클릭하면 해당 섹션으로 이동 */
+    var $smallGnbTop = $('.small__gnb__menu');
+    $smallGnbTop.click(function(e){
+        e.preventDefault();
+        var link = $(this).attr('data-target');
+        var $target = $(link);
+        var distance = $target.offset().top;
+    $('html, body').stop().animate({scrollTop: distance});
+    })
+
+
+        var $gnbMenu = $('.gnb__menu');
+    $gnbMenu.click(function(){
+        var link = $(this).attr('data-target');
+        var $target = $(link);
+        var distance = $target.offset().top;
+    $('html, body').stop().animate({scrollTop: distance});
+    })
+
+
+
+
         /* 스크롤이 header보다 내려가면 header가 fix 됨 */
-        if(scrollTop > headerHeight){
-            $headerSmall.addClass('fixed');
-            $logo.addClass('fixed');
-            $gnb.addClass('fixed');
-            $smallGnb.addClass('fixed');
-        }else {
-            $headerSmall.removeClass('fixed');
-            $logo.removeClass('fixed');
-            $gnb.removeClass('fixed');
-            $smallGnb.removeClass('fixed');
-        }
-        /* 스크롤이 home보다 내려가면 arrowup이 보이게 됨 */
-        if(scrollTop > homeHeight){
-            $arrowup.addClass('visible');
-        }else {
-            $arrowup.removeClass('visible');
-        }
-        
+    if(scrollTop > headerHeight){
+        $headerSmall.addClass('fixed');
+        $logo.addClass('fixed');
+        $gnb.addClass('fixed');
+        $smallGnb.addClass('fixed');
+    }else {
+        $headerSmall.removeClass('fixed');
+        $logo.removeClass('fixed');
+        $gnb.removeClass('fixed');
+        $smallGnb.removeClass('fixed');
+    }
+    /* 스크롤이 home보다 내려가면 arrowup이 보이게 됨 */
+    if(scrollTop > homeHeight){
+        $arrowup.addClass('visible');
+    }else {
+        $arrowup.removeClass('visible');
+    }
+    
     })
 
     /* arrowup을 클릭하면 화면이 위로 올라가게 함 */
@@ -59,9 +82,9 @@ $(function(){
     })
     .setTween(circleLeft)
     .addTo(controller)
-    .addIndicators({
-        name: 'circle-left',
-    })
+    // .addIndicators({
+    //     name: 'circle-left',
+    // })
 
 
     /* left circle이 다시 사라지게 */
@@ -77,9 +100,9 @@ $(function(){
     })
     .setTween(circleLeft)
     .addTo(controller)
-    .addIndicators({
-        name: 'circle-left-remove',
-    })
+    // .addIndicators({
+    //     name: 'circle-left-remove',
+    // })
 
     /* right circle */
     var circleRight = TweenMax.to('.history__circle__right', 1, {
@@ -94,9 +117,9 @@ $(function(){
     })
     .setTween(circleRight)
     .addTo(controller)
-    .addIndicators({
-        name: 'circle-right',
-    })
+    // .addIndicators({
+    //     name: 'circle-right',
+    // })
     /* right circle이 다시 사라지게 */
     var circleRight = TweenMax.to('.history__circle__right', 1, {
         x: 0,
@@ -110,9 +133,9 @@ $(function(){
     })
     .setTween(circleRight)
     .addTo(controller)
-    .addIndicators({
-        name: 'circle-right',
-    })
+    // .addIndicators({
+    //     name: 'circle-right',
+    // })
 
     /* ===== section.website - slider ===== */
     $('.website__container').slick({
@@ -124,11 +147,28 @@ $(function(){
     
     /* ===== artwork modal ===== */
     var $overlay = $('.overlay'),
-        $example = $('.artwork__example'),
-        $modal = $('.modal');
+        $modal = $('.modal'),
+        $artworkImg = $('.artwork__img'),
+        $closeModal = $('.modal__close');
     /* 초기상태 */
     $overlay.hide();
-    console.log($overlay);
+    /* 이미지를 클릭하면 해당 overlay가 나옴 */
+    $artworkImg.click(function(){
+        var $src = $(this).children('img').attr('src'),
+            $modalImg = $('.modal__content img');
+        $modalImg.attr('src',$src);
+        $overlay.fadeIn();
+    })
+    /* close btn을 클릭하면 modal이 닫힘 */
+    $closeModal.click(function(){
+        $overlay.fadeOut();
+    })
+    /* overlay를 클릭하면 modal이 닫힘 */
+    $overlay.click(function(e){
+        if(e.target == e.currentTarget){
+            $(this).fadeOut();
+        }
+    })
 
 
     /* ===== point accordion ===== */
