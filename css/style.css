@@ -1,9 +1,9 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two');
-@font-face {
+/* @font-face {
     font-family: 'HechoAMano';
     src: url(../font/HechoAMano/HechoAMano-Regular.ttf)
-}
+} */
 @font-face {
     font-family: 'franklin_gothic';
     src: url(../font/franklin_gothic/framd.ttf);
@@ -44,8 +44,10 @@
     --AppleSDGothicNeoEB-font: 'AppleSDGothicNeoEB';
     --idonottrustyou-font: 'i_do_not_trust_you';
     --kindergarden-font: 'kindergarden';
+
     /* font texttransform */
     --uppercase-font: uppercase;
+
     /* font size */
     --mega-font-size: 7rem;
     --big-font-size: 4rem;
@@ -55,10 +57,11 @@
     --h4-font-size: 1.5rem;
     --h5-font-size: 1.25rem;
     --h6-font-size: 1rem;
+    --small-font-size: 0.8rem;
+
     /* font weight */
     --normal-font-weight: weight;
     --bold-font-weight: bold;
-
 
     /* ===== z-index ===== */
     --header-zindex: 100;
@@ -147,6 +150,11 @@ h6 {
     justify-content: center;
     align-items: center;
 }
+/* ----------------------- dark-theme ----------------------- */
+body.dark-theme {
+    color: var(--white-color);
+    background: var(--main-black-color);
+}
 
 /* ===== common ===== */
 body {
@@ -155,13 +163,6 @@ body {
     font-family: var(--AppleSDGothicNeoM-font);
     scroll-behavior: smooth;
 }
-
-/* ----------------------- dark-theme ----------------------- */
-body.dark-theme {
-    color: var(--white-color);
-    background: var(--main-black-color);
-}
-
 section {
     margin-bottom: 3rem;
 }
@@ -1136,3 +1137,5 @@ footer {
 #arrowup.visible {
     display: block;
 }
+
+
