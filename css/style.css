@@ -51,13 +51,16 @@
     /* font size */
     --mega-font-size: 7rem;
     --big-font-size: 4rem;
+    --h0-font-size: 3rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 2rem;
     --h3-font-size: 1.75rem;
     --h4-font-size: 1.5rem;
     --h5-font-size: 1.25rem;
     --h6-font-size: 1rem;
+    --tablet-gnb-font-size: 0.9rem;
     --small-font-size: 0.8rem;
+    --moresmall-font-size: 0.5rem;
 
     /* font weight */
     --normal-font-weight: weight;
@@ -540,12 +543,12 @@ from { transform: rotate(360deg); }
     /* border-bottom: 1px solid #000; */
 }
 .about__skills__container {
-    display: flex;
+    /* display: flex; */
     /* justify-content: flex-end; */
     padding-bottom: 2rem;
 }
 .about__skills {
-    width: 780px;
+    max-width: 780px;
 }
 .skills__content {
     margin-top: 2rem;
