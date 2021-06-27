@@ -185,10 +185,26 @@
     .floating__wrap {
         display: block;
     }
+    .floating__right {
+        padding-left: 2rem;
+    }
+    .about__img__item {
+        margin-bottom: 4rem;
+    }
     .about__img__box {
         width: 400px;
         height: 400px;
         margin: 0 auto;
+    }
+    .about__sub-title {
+        font-size: var(--h2-font-size);
+        margin-bottom: 1rem;
+    }
+    .about__info__education {
+        margin-top: 3rem;
+    }
+    .about__skills__section {
+        margin-top: 3rem;
     }
     /* ===== history ===== */
     .history__img img {
@@ -219,5 +235,67 @@
         height: 25px;
         font-size: var(--moresmall-font-size);
         line-height: 25px;
+    }
+    .slick-dots {
+        margin-top: -1rem;
+    }
+    .slick-dots li button {
+        width: 15px;
+        height: 15px;
+    }
+    /* ===== artwork ===== */
+    .modal {
+        width: 300px;
+        height: 250px;
+    }
+    .modal__close {
+        padding: .5rem .7rem;
+    }
+    /* ===== point ===== */
+    .point__container {
+        width: 85%;
+    }
+    .point__item__content {
+        padding: 1rem;
+    }
+    .point__img {
+        flex: 3;
+    }
+    .point__img img {
+        width: 200px;
+    }
+    .point__desc-text {
+        font-size: var(--small-font-size);
+    }
+    .point__desc-tag {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .point__desc-tag span {
+        margin-bottom: .3rem;
+        margin-right: .3rem;
+    }
+    .point__desc-text {
+        margin-top: .5rem;
+    }
+    /* ===== blog ===== */
+    .blog__item {
+        width: 100%;
+    }
+    /* ===== footer ===== */
+    .footer__title {
+        padding-top: 2rem;
+    }
+    .footer__content {
+        font-size: var(--h5-font-size);
+    }
+    .footer__item:before {
+        font-size: var(--h3-font-size);
+    }
+    .footer__text {
+        font-size: var(--bigger-font-size);
+    }
+    .footer__copyright {
+        font-size: var(--small-font-size);
     }
 }
