@@ -159,6 +159,14 @@ $(function(){
         $modalImg.attr('src',$src);
         $overlay.fadeIn();
     })
+    /* ===수정하기========================= */
+    $('.newyork_magazine').click(function(){
+        $('.newyork_magazine_guide').addClass('visible');
+    })
+    $('.stump_film_logo').click(function(){
+        $('.stumptown_logo_guide').addClass('visible');
+    })
+    /* ===수정하기========================= */
     /* close btn을 클릭하면 modal이 닫힘 */
     $closeModal.click(function(){
         $overlay.fadeOut();

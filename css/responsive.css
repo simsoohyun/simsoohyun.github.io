@@ -160,6 +160,22 @@
     .logo {
         font-size: var(--h4-font-size);
     }
+    .logo.fixed {
+        font-size: var(--h6-font-size);
+    }
+    .small__gnb {
+        width: 80%;
+    }
+    .small__gnb__item {
+        margin-left: .5rem;
+    }
+    .small__gnb__menu {
+        font-size: var(--moresmall-font-size);
+    }
+    .darkmode__icon,
+    .lightmode__icon {
+        font-size: var(--small-font-size);
+    }
     .header__text {
         font-size: var(--h0-font-size);
     }
@@ -171,8 +187,8 @@
     }
     /* ===== home ===== */
     .wave {
-        width: 400px;
-        height: 400px;
+        width: 350px;
+        height: 350px;
         margin-top: 6rem;
     }
     /* ===== section common ===== */
@@ -217,6 +233,9 @@
         margin: 0 .5rem;
     }
     /* ===== website ===== */
+    .website__container {
+        margin-top: 1rem;
+    }
     .slick-arrow:before {
         font-size: var(--h1-font-size);
     }

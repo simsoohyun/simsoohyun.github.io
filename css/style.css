@@ -1,9 +1,5 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two');
-/* @font-face {
-    font-family: 'HechoAMano';
-    src: url(../font/HechoAMano/HechoAMano-Regular.ttf)
-} */
 @font-face {
     font-family: 'franklin_gothic';
     src: url(../font/franklin_gothic/framd.ttf);
@@ -23,9 +19,7 @@
 :root {
     /* ===== color ===== */
     --background-color: #efecea;
-    --home-first-color: rgb(250, 244, 214);
     --main-yellow-color: #ffde21;
-    --home-third-color: #f8e474;
     --lighter-yellow-color: #fffbb3;
     --lighter-yellow-opacity-color: #fffbb3b9;
     --main-black-color: #111111;
@@ -33,7 +27,6 @@
     --gray-color: #666666;
     --lighter-gray-color: #b9b9b9;
     --blue-color: #1c75bc;
-    --dark-yellow-color: #f1d11c;/* 안씀 */
     --arrowup-background-color: #ffde21b2;
 
     /* ===== typography ===== */
@@ -856,17 +849,20 @@ section#artwork {
     margin: 0 auto;
 }
 .l-grid-item {
-    padding-top: 25%;
+    padding-top: 33.3333%;
     float: left;
     position: relative;
+    cursor: pointer;
 }
-.l-grid-item-long {
-    padding-top: 50%;
-    float: right;
+.l-grid-item-full {
+    width: 100%;
+    padding-top: 25%;
+    /* float: right; */
 }
 .l-grid-item-large {
-    width: 50%;
-    float: left;
+    width: 66.6666%;
+
+    /* float: left; */
 }
 .cover {
     /* background: pink; */
@@ -889,12 +885,12 @@ section#artwork {
     box-shadow: 4px 12px 20px 6px rgb(0 0 0 / 18%);
     transform: translateY(-5px);
 }
-.cover img {
+.artwork__img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 
 }
 /* modal */
@@ -908,13 +904,13 @@ section#artwork {
 }
 .modal {
     width: 800px;
-    height: 500px;
+    height: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #eee;
-    /* overflow: scroll; */
+    overflow: scroll;
     border-radius: var(--border-radius);
 }
 .modal::-webkit-scrollbar {
@@ -935,7 +931,18 @@ section#artwork {
 .modal__content img {
     width: 100%;
 }
-
+.newyork_magazine_guide,
+.stumptown_logo_guide,
+.nike_poster_guide,
+.ridethewave_guide {
+    display: none;
+}
+.newyork_magazine_guide.visible,
+.stumptown_logo_guide.visible,
+.nike_poster_guide.visible,
+.ridethewave_guide.visible {
+    display: block;
+}
 /* ===== section.point ===== */
 section#point {
     /* height: 55vh; */
