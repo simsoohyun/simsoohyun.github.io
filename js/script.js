@@ -148,28 +148,16 @@ $(function(){
     /* ===== artwork modal ===== */
     var $overlay = $('.overlay'),
         $modal = $('.modal'),
-        $artworkImg = $('.artwork__img'),
-        $closeModal = $('.modal__close');
+        $artworkImg = $('.artwork__img');
     /* 초기상태 */
     $overlay.hide();
     /* 이미지를 클릭하면 해당 overlay가 나옴 */
     $artworkImg.click(function(){
-        var $src = $(this).children('img').attr('src'),
+        var $src = $(this).attr('data-link'),
             $modalImg = $('.modal__content img');
-        $modalImg.attr('src',$src);
+
+        $modalImg.attr('src', $src);
         $overlay.fadeIn();
-    })
-    /* ===수정하기========================= */
-    $('.newyork_magazine').click(function(){
-        $('.newyork_magazine_guide').addClass('visible');
-    })
-    $('.stump_film_logo').click(function(){
-        $('.stumptown_logo_guide').addClass('visible');
-    })
-    /* ===수정하기========================= */
-    /* close btn을 클릭하면 modal이 닫힘 */
-    $closeModal.click(function(){
-        $overlay.fadeOut();
     })
     /* overlay를 클릭하면 modal이 닫힘 */
     $overlay.click(function(e){
