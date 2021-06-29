@@ -172,6 +172,11 @@
     .small__gnb__menu {
         font-size: var(--moresmall-font-size);
     }
+    .small__gnb__menu:before {
+        width: 3px;
+        height: 3px;
+        left: -5px;
+    }
     .darkmode__icon,
     .lightmode__icon {
         font-size: var(--small-font-size);
@@ -187,8 +192,8 @@
     }
     /* ===== home ===== */
     .wave {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
         margin-top: 6rem;
     }
     /* ===== section common ===== */
@@ -263,6 +268,10 @@
         height: 15px;
     }
     /* ===== artwork ===== */
+    .l-grid-item {
+        width: 100%;
+        padding-top: 50%;
+    }
     .modal {
         width: 300px;
         height: 250px;

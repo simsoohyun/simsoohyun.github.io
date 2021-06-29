@@ -554,7 +554,7 @@ from { transform: rotate(360deg); }
     display: inline-block;
     width: 80px;
     height: 150px;
-    border: 3px solid #000;
+    border: 3px solid;
     border-top: none;
     cursor: pointer;
 }
@@ -857,12 +857,9 @@ section#artwork {
 .l-grid-item-full {
     width: 100%;
     padding-top: 25%;
-    /* float: right; */
 }
 .l-grid-item-large {
     width: 66.6666%;
-
-    /* float: left; */
 }
 .cover {
     /* background: pink; */
@@ -892,8 +889,14 @@ section#artwork {
     width: 100%;
     /* height: 100%; */
 }
+.newyork_magazine {
+    object-fit: cover;
+    object-position: center center;
+    height: 100%;
+}
 .stump_film_logo,
 .nike_poster {
+    object-fit: cover;
     height: 100%;
 }
 /* modal */
@@ -919,32 +922,8 @@ section#artwork {
 .modal::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-.modal__close {
-    border: 1px solid #000;
-    position: absolute;
-    right: -1rem;
-    top: -1rem;
-    background: var(--white-color);
-    padding: .8rem 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.modal__content {
-}
 .modal__content img {
     width: 100%;
-}
-.newyork_magazine_guide,
-.stumptown_logo_guide,
-.nike_poster_guide,
-.ridethewave_guide {
-    display: none;
-}
-.newyork_magazine_guide.visible,
-.stumptown_logo_guide.visible,
-.nike_poster_guide.visible,
-.ridethewave_guide.visible {
-    display: block;
 }
 /* ===== section.point ===== */
 section#point {
