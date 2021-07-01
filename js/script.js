@@ -36,9 +36,6 @@ $(function(){
     $('html, body').stop().animate({scrollTop: distance});
     })
 
-
-
-
         /* 스크롤이 header보다 내려가면 header가 fix 됨 */
     if(scrollTop > headerHeight){
         $headerSmall.addClass('fixed');
