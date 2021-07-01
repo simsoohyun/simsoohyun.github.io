@@ -282,9 +282,12 @@
         width: 350px;
         height: 500px;
     }
-    .modal__close {
-        padding: .5rem .7rem;
+    .aesop_banner {
+        object-fit: cover;
+        object-position: left center;
+        height: 100%;
     }
+
     /* ===== point ===== */
     .point__container {
         width: 85%;
